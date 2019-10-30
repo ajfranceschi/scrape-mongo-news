@@ -1,5 +1,15 @@
-<div class="jumbotron">
+<div class="container">
     {{#each articlesArray}}
-        <h1>{{articlesArray.title}}</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a href="{{link}}">
+                        {{title}}
+                    </a>
+                </h5>
+                <p class="card-text">{{summary}}</p>
+            </div>
+        </div>
+        <h1></h1>
     {{/each}}
 </div>
