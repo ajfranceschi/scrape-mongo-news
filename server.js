@@ -1,8 +1,5 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
-const axios = require("axios");
-const cheerio = require("cheerio");
-const mongoose = require("mongoose");
 require('./config/connection');
 
 const PORT = process.env.PORT || 3005;
@@ -17,6 +14,8 @@ app.set("view engine", "handlebars");
 
 //routes
 require('./controllers/routes')(app);
+// api routes
+require('./controllers/apiRoutes')(app);
 
 app.listen(PORT, () => {
   console.log(`Listening on PORT: ${PORT}`);
