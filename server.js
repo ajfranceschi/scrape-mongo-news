@@ -5,7 +5,6 @@ require('./config/connection');
 const PORT = process.env.PORT || 3005;
 const app = express();
 
-app.use(logger("dev"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
