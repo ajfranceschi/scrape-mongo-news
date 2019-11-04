@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const MONGOOSE_URI = process.env.MONGOOSE_URI || "mongodb://localhost/articles_db";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/articles_db";
 
 
-module.exports = mongoose.connect(MONGOOSE_URI, {
+module.exports = mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
