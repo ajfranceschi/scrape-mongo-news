@@ -17,9 +17,9 @@ const ArticleSchema = new Schema({
     type: String,
     required: true
   },
-  hoursAgoPublished: {
-    type: Number,
-    default: 1
+  published: {
+    type: Date,
+    required: true
   },
   comments: [
     {

@@ -1,6 +1,7 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
 const db = require("../models/index");
+const moment = require('moment');
 
 module.exports = app => {
   app.get("/api/scrape", (req, res) => {
@@ -19,12 +20,9 @@ module.exports = app => {
           const summary = $(element)
             .find("p.gs-c-promo-summary")
             .text();
-          const hoursAgoPublished = parseInt(
-            $(element)
-              .find("span.gs-u-vh")
-              .text()
-              .substr(0, 2)
-          );
+          const published = $(element)
+              .find("time")
+              .attr('datetime');
 
           if (
             $(element)
@@ -37,7 +35,7 @@ module.exports = app => {
               !results.length ||
               !results.find(article => article.title === title)
             ) {
-              results.push({ title, summary, link, hoursAgoPublished });
+              results.push({ title, summary, link, published });
             }
           }
         });
