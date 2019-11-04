@@ -41,6 +41,74 @@
   text-shadow: white 5px 5px 20px, white 5px 5px 20px, white -5px -5px 20px, white -5px -5px 20px, white 5px 5px 20px, white 5px 5px 20px, white -5px -5px 20px, white -5px -5px 20px;
 }
 
+.card a {
+  color: #2a2a00;
+}
+
+.commentsBtn {
+  color: #2a2a00;
+  border: 1px solid #2a2a00;
+  border-radius: 5px;
+}
+
+.commentsContainer {
+  min-height: 95vh;
+  padding-top: 20px;
+  background-color: rgba(17,17,17,0.85);
+}
+
+.commentsHeading {
+  color: rgba(227, 231, 232, 0.70);
+  margin-bottom: 20px;
+}
+
+.commentsContainer form {
+  color: rgba(227, 231, 232, 0.70);
+}
+
+#commentTxt {
+  background-color: rgba(227, 231, 232, 0.70);
+}
+
+#commentSubmitBtn {
+  background-color: rgba(227, 231, 232, 0.70);
+  color: rgba(17,17,17,0.85);
+  margin-bottom: 20px;
+}
+
+.commentsList {
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.commentCard {
+  background-color: rgba(227, 231, 232, 0.70);
+  margin: 5px 0;
+  padding: 5px 0;
+
+}
+.commentDiv {
+  width: 100%;
+  padding: 0;
+
+}
+
+.commentDiv p {
+  padding: 0;
+  margin: 2px 0px;
+}
+
+.deleteCommentBtn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.trashIcon {
+  padding: 10px 15px;
+}
+
 @media only screen and (max-width: 660px ) {
   .jumbotron h1 {
     font-size: 60px;

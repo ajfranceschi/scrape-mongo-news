@@ -1,0 +1,22 @@
+<div class="container-fluid commentsContainer d-flex justify-content-start flex-column">
+        <h2 class="mt-2 text-center commentsHeading">{{title}}</h2>
+    <div class="container d-flex justify-content-center">
+        <div class="col-md-10">
+            <div class="commentsList">
+                {{#if comments}}
+                    {{#each comments}}
+                        {{> comments/comments_block}}
+                    {{/each}}
+                {{/if}}
+            </div>
+            <form>
+
+                <div class="form-group">
+                    <label for="commentTxt">Enter your comment:</label>
+                    <textarea name="commentTxt" id="commentTxt" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <button type='submit' class="btn" id="commentSubmitBtn" data-articleid="{{articleId}}">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

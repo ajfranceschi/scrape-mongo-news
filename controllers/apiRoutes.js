@@ -59,4 +59,27 @@ module.exports = app => {
         res.json("Error Creating Articles");
       });
   });
+
+  app.post("/api/addComment", (req, res) => {
+    const comment = req.body.comment;
+
+    db.Comment.create({ content: comment})
+      .then(articleComment => {
+        return db.Article.findOneAndUpdate({_id: req.body.articleId},
+          { $push: { comments: articleComment._id } },
+          {new: true}
+        )
+          .then(article => res.json(article))
+          .catch(error => res.json(error));
+      })
+      .catch(error => console.log(error));
+  });
+
+  app.delete('/api/rmComment',  (req, res) => {
+    let noteId = req.body.id;
+
+    db.Comment.deleteOne({_id: noteId}).then(notes => {
+      res.json(notes);
+    }).catch(error => res.json(error));
+  })
 };
