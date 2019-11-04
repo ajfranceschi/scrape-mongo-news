@@ -1,7 +1,7 @@
 <div class="container-fluid commentsContainer d-flex justify-content-start flex-column">
-        <h2 class="mt-2 text-center commentsHeading">{{title}}</h2>
+        <h2 class="mt-2 text-center w-100 commentsHeading">{{title}}</h2>
     <div class="container d-flex justify-content-center">
-        <div class="col-md-10">
+        <div class="col-12">
             <div class="commentsList">
                 {{#if comments}}
                     {{#each comments}}
@@ -13,7 +13,7 @@
 
                 <div class="form-group">
                     <label for="commentTxt">Enter your comment:</label>
-                    <textarea name="commentTxt" id="commentTxt" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea id="commentTxt" cols="30" rows="5" class="form-control" placeholder="{{#unless comments}}Be the first to comment!{{/unless}} {{#if comments}}What do you think?{{/if}}"></textarea>
                 </div>
                 <button type='submit' class="btn" id="commentSubmitBtn" data-articleid="{{articleId}}">Submit</button>
             </form>

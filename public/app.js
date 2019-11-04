@@ -53,7 +53,7 @@ $("#commentSubmitBtn").on("click", event => {
     });
 });
 
-$(".commentsList").on("click", "button", event => {
+$(".commentsList").on("click", ".trashIcon", event => {
   const commentId = event.target.parentNode.dataset.id;
 
   fetch("/api/rmComment", {

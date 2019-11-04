@@ -45,6 +45,8 @@
   color: #2a2a00;
 }
 
+
+/* COMMENTS PAGE */
 .commentsBtn {
   color: #2a2a00;
   border: 1px solid #2a2a00;
@@ -54,26 +56,27 @@
 .commentsContainer {
   min-height: 95vh;
   padding-top: 20px;
-  background-color: rgba(17,17,17,0.85);
+  color: rgba(17,17,17,0.85);
 }
 
 .commentsHeading {
-  color: rgba(227, 231, 232, 0.70);
   margin-bottom: 20px;
 }
 
-.commentsContainer form {
-  color: rgba(227, 231, 232, 0.70);
-}
+/*.commentsContainer form {*/
+/*  color: rgba(227, 231, 232, 0.70);*/
+/*}*/
 
 #commentTxt {
   background-color: rgba(227, 231, 232, 0.70);
+  font-size: 14px;
 }
 
 #commentSubmitBtn {
   background-color: rgba(227, 231, 232, 0.70);
   color: rgba(17,17,17,0.85);
   margin-bottom: 20px;
+  border: 1px solid rgba(17,17,17,0.85);
 }
 
 .commentsList {
@@ -96,6 +99,10 @@
 .commentDiv p {
   padding: 0;
   margin: 2px 0px;
+}
+
+.commentTimeStamp {
+  font-size: 10px;
 }
 
 .deleteCommentBtn {

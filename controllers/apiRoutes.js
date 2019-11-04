@@ -52,7 +52,6 @@ module.exports = app => {
     // get database contents to check if exists
     db.Article.create(articles)
       .then(dbArticles => {
-        console.log("db.create");
         res.json(dbArticles);
       })
       .catch(() => {
