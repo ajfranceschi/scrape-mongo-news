@@ -1,6 +1,5 @@
 const express = require("express");
 const handlebars = require("express-handlebars");
-const logger = require('morgan');
 require('./config/connection');
 
 const PORT = process.env.PORT || 3005;
