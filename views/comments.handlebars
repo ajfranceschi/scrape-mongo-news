@@ -13,7 +13,12 @@
 
                 <div class="form-group">
                     <label for="commentTxt">Enter your comment:</label>
-                    <textarea id="commentTxt" cols="30" rows="5" class="form-control" placeholder="{{#unless comments}}Be the first to comment!{{/unless}} {{#if comments}}What do you think?{{/if}}"></textarea>
+                    <textarea
+                            id="commentTxt"
+                            class="form-control"
+                            cols="30"
+                            rows="5"
+                            placeholder="{{#unless comments}}Be the first to comment!{{/unless}}{{#if comments}}What do you think?{{/if}}"></textarea>
                 </div>
                 <button type='submit' class="btn" id="commentSubmitBtn" data-articleid="{{articleId}}">Submit</button>
             </form>
