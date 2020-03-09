@@ -13,6 +13,7 @@ Technologies Used:
 * Cheerio
 * Axios
 * MomentJS
+* JavaScript
 * HTML
 * CSS
 * Bootstrap
