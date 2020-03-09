@@ -56,6 +56,7 @@
   color: #2a2a00;
   border: 1px solid #2a2a00;
   border-radius: 5px;
+  padding: 2px 10px
 }
 
 .commentsContainer {
@@ -124,5 +125,9 @@
 @media only screen and (max-width: 660px ) {
   .jumbotron h1 {
     font-size: 60px;
+  }
+
+  .card-body, .commentsBtn {
+    font-size: .85rem;
   }
 }

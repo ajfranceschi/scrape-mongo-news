@@ -13,20 +13,22 @@
     {{#each articlesArray}}
         <div class="card w-100 my-2">
             <div class="card-body d-flex">
-                <div class="col-10">
+                <div class="col">
                     <h5 class="card-title">
                         <a href="{{link}}" target="_blank">
                             {{title}}
                         </a>
                     </h5>
                     <p class="card-text">{{summary}}</p>
-                    <p class="text-muted publishedDate mb-0">
+                    <div class="d-flex align-items-center">
+                        <p class="text-muted publishedDate mb-0">
                         <i class="far fa-clock"></i> {{published}}</p>
-
+                        <button class="btn commentsBtn ml-3" data-articleid={{_id}}>Comments</button>
+                    </div>
                 </div>
-                <div class="col-2 d-flex justify-content-end align-items-center">
-                    <button class="btn commentsBtn" data-articleid={{_id}}>Comments</button>
-                </div>
+<!--                <div class="col-2 d-flex justify-content-end align-items-end commentsBtnWrapper">-->
+<!--                    <button class="btn commentsBtn" data-articleid={{_id}}>Comments</button>-->
+<!--                </div>-->
             </div>
 
         </div>
